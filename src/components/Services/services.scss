@@ -1,0 +1,147 @@
+@import "../../index.scss";
+
+.services-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding-bottom: 4rem;
+	.services-title {
+		text-align: center;
+		font-family: $poppins;
+		font-size: 3rem;
+		font-weight: 600;
+		margin: 1rem 0;
+	}
+	.services-container {
+		.service-img {
+			width: 70px;
+			margin: 1rem;
+		}
+		.services-list-container {
+			.service-row-1 {
+				display: flex;
+				justify-content: center;
+			}
+			.service-row-2 {
+				display: flex;
+			}
+
+			.single-service {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				justify-content: space-evenly;
+				font-family: $poppins;
+				font-size: 1rem;
+				line-height: 1.4rem;
+				text-align: center;
+				margin: 2rem;
+				color: grey;
+				width: 380px;
+
+				padding: 2rem;
+				background-color: white;
+				border-radius: 20px;
+				box-shadow: 0 0 20px rgba($color: #414141, $alpha: 0.15);
+				transition: all 0.3s ease;
+				&:hover {
+					transform: translateY(-5%);
+				}
+
+				.single-service-title {
+					font-size: 1.5rem;
+					line-height: 1.7rem;
+					font-weight: 500;
+					color: $purple;
+					margin-bottom: 0.5rem;
+				}
+				.service-des {
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1600px) {
+	.services-section {
+		.services-container {
+			.services-list-container {
+				.single-service {
+					margin: 2rem;
+					width: 330px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.services-section {
+		.services-container {
+			.services-list-container {
+				.single-service {
+					margin: 1rem;
+					width: 270px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 970px) {
+	.services-section {
+		.services-title {
+			font-size: 2.2rem;
+			font-weight: 600;
+			margin: 0.2rem 0;
+		}
+		.services-container {
+			.services-list-container {
+				.service-row-1 {
+					flex-direction: column;
+					align-items: center;
+				}
+				.service-row-2 {
+					flex-direction: column;
+					align-items: center;
+				}
+				.single-service {
+					width: 70vw;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.services-section {
+		.services-container {
+			.services-list-container {
+				.single-service {
+					font-size: 0.8rem;
+					line-height: 1.2rem;
+					margin: 1rem;
+					width: 75vw;
+					padding: 1.4rem;
+
+					&:hover {
+						transform: none;
+					}
+
+					.single-service-title {
+						font-size: 1.6rem;
+						font-weight: 500;
+						color: $purple;
+						margin-bottom: 0.5rem;
+					}
+					.service-des {
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+}

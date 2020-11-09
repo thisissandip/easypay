@@ -1,0 +1,254 @@
+@import "../../index.scss";
+
+.layout-section {
+	position: relative;
+	width: 100%;
+	height: 90vh;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	transition: 0.2s all ease;
+	background: linear-gradient(to bottom right, $blue, $purple);
+
+	.notcashback {
+		flex-direction: row-reverse;
+	}
+
+	.layout-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		width: 95vw;
+		position: relative;
+		z-index: 5;
+		font-family: $poppins;
+		.layout-left-container {
+			margin-top: -4rem;
+			width: 50%;
+			.layout-title {
+				font-size: 3.2rem;
+				font-weight: 700;
+				line-height: 4.2rem;
+			}
+			.layout-des {
+				margin-top: 1rem;
+
+				.single-description {
+					display: flex;
+					div {
+						font-weight: 600;
+						margin-right: 0.5rem;
+					}
+				}
+
+				.single-description:not(:first-child) {
+					margin: 1.5rem 0;
+				}
+			}
+			.layout-btns-cont {
+				margin-top: 1.6rem;
+				display: flex;
+
+				.startnow-btn {
+					cursor: pointer;
+					font-size: 1rem;
+					color: white;
+					border: 1px solid #6b35b8;
+					outline: none;
+					background-color: #6b35b8;
+					border-radius: 20px;
+					padding: 0.7rem 1.5rem;
+					margin-right: 1rem;
+					transition: all 0.2s ease;
+					&:hover {
+						background: none;
+						color: #6b35b8;
+					}
+				}
+			}
+		}
+		.layout-right-container {
+			.cashbackimg {
+				width: 500px;
+			}
+			.diffcardsimg {
+				width: 500px;
+				margin-right: 1.5rem;
+			}
+		}
+	}
+}
+
+/* .layout-section::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom right, $blue, $purple);
+	opacity: 0.9;
+	z-index: 0;
+} */
+
+// wide screen
+@media screen and (min-width: 2000px) {
+	.layout-section {
+		.layout-container {
+			width: 60vw;
+			.layout-left-container {
+				margin-top: -6rem;
+			}
+		}
+	}
+}
+
+// left content size screen
+@media screen and (max-width: 1250px) {
+	.layout-section {
+		.layout-container {
+			width: 90vw;
+			.layout-left-container {
+				margin-top: -5rem;
+				margin-left: 1rem;
+				.layout-title {
+					font-size: 2.5rem;
+					line-height: 3rem;
+				}
+			}
+			.layout-right-container {
+				.cashbackimg {
+					width: 450px;
+				}
+				.diffcardsimg {
+					width: 470px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.layout-section {
+		.layout-container {
+			width: 95vw;
+		}
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.layout-section {
+		overflow: hidden;
+		height: 100%;
+		.wave {
+			width: 300%;
+		}
+		.layout-container {
+			flex-direction: column;
+			justify-content: flex-start;
+			margin-top: 5vh;
+
+			width: 100vw;
+			.layout-left-container {
+				margin-left: 0rem;
+				margin-top: 0;
+				width: 90%;
+				.layout-title {
+					text-align: left;
+					font-size: 2.2rem;
+					line-height: 3rem;
+				}
+				.layout-des {
+					text-align: left;
+				}
+				.layout-btns-cont {
+					margin-top: 0rem;
+					justify-content: left;
+				}
+			}
+			.layout-right-container {
+				margin: 3rem 0;
+				.cashbackimg {
+					width: 350px;
+				}
+				.diffcardsimg {
+					width: 290px;
+				}
+			}
+		}
+	}
+	.layout-section::before {
+		height: 100%;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.layout-section {
+		.layout-container {
+			.layout-left-container {
+				width: 90%;
+				.layout-title {
+					font-size: 1.5rem;
+					line-height: 2rem;
+				}
+				.layout-des {
+					font-size: 1rem;
+				}
+				.layout-btns-cont {
+					.startnow-btn {
+						font-size: 1rem;
+						padding: 0.4rem 0.8rem;
+					}
+				}
+			}
+			.layout-right-container {
+				.cashbackimg {
+					width: 280px;
+				}
+				.diffcardsimg {
+					width: 290px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 300px) {
+	.layout-section {
+		.layout-container {
+			.layout-left-container {
+				width: 90%;
+				.layout-title {
+					font-size: 1.2rem;
+					line-height: 1.5rem;
+				}
+				.layout-des {
+					font-size: 0.7rem;
+				}
+				.layout-btns-cont {
+					.startnow-btn {
+						font-size: 0.7rem;
+					}
+				}
+			}
+
+			.layout-right-container {
+				.cashbackimg {
+					width: 240px;
+				}
+				.diffcardsimg {
+					width: 200px;
+				}
+			}
+		}
+	}
+}
+
+/* // less than 800px screen
+@media screen and (max-width: 900px){
+  header {
+    .layout-container {
+      flex-direction: column;
+      width: 100vw;
+    }
+  }
+} */

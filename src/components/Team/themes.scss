@@ -1,0 +1,136 @@
+@import "../../index.scss";
+
+.team-section {
+	display: flex;
+	padding: 4rem 0;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding-bottom: 5rem;
+	font-family: $poppins;
+	background-color: rgb(245, 245, 245);
+	.team-section-title {
+		width: 80%;
+		text-align: center;
+		font-size: 3rem;
+		font-weight: 600;
+		margin-bottom: 0.8rem;
+	}
+	.team-section-des {
+		width: 60%;
+		color: gray;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	.team-container {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		.team-card {
+			position: relative;
+			width: 280px;
+			height: 280px;
+
+			margin: 1rem;
+			&:hover .team-card-overlay {
+				height: 100%;
+			}
+			.member-pic {
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+		.team-card-overlay {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+			position: absolute;
+			width: 100%;
+			height: 0px;
+			opacity: 0.7;
+			z-index: 6;
+			background-color: #6b35b8;
+			transition: 0.2s all ease;
+			color: white;
+			.member-name {
+				font-size: 1.3rem;
+				font-weight: 500;
+			}
+			.member-pos {
+				font-size: 1.2rem;
+				font-weight: 300;
+				margin-bottom: 0.3rem;
+			}
+			.member-links {
+				display: flex;
+				.social-link {
+					font-size: 1.5rem;
+					margin: 0.3rem;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1350px) {
+	.team-section {
+		.team-container {
+			.team-card {
+				width: 250px;
+				height: 250px;
+				transition: 0.2s all ease;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.team-section {
+		padding: 3rem 0;
+		.team-section-title {
+			width: 90%;
+			font-size: 2.3rem;
+		}
+		.team-section-des {
+			width: 90%;
+			color: gray;
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.team-section {
+		padding: 2rem 0;
+		.team-section-title {
+			width: 90%;
+			margin-bottom: 0.2rem;
+			font-size: 2.3rem;
+		}
+		.team-section-des {
+			width: 90%;
+			color: gray;
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.team-section {
+		padding: 2rem 0;
+		.team-section-title {
+			width: 90%;
+			margin-bottom: 0.2rem;
+			font-size: 1.5rem;
+		}
+		.team-section-des {
+			width: 90%;
+			color: gray;
+			margin-bottom: 0.8rem;
+		}
+	}
+}

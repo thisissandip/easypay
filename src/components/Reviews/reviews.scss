@@ -5,7 +5,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 5rem 0;
+	padding: 4rem 0;
 	width: 100%;
 	background-color: #fff;
 	font-family: $poppins;
@@ -108,7 +108,7 @@
 		padding: 3rem 0;
 		.reviews-section-title {
 			width: 90%;
-			font-size: 2rem;
+			font-size: 2.3rem;
 		}
 		.reviews-section-des {
 			width: 90%;
@@ -140,12 +140,14 @@
 		.reviews-section-title {
 			width: 95%;
 			text-align: center;
-			font-size: 2rem;
-			line-height: 2.4rem;
+			font-size: 1.6rem;
+			line-height: 1.9rem;
+			margin-bottom: 10px;
 		}
 		.reviews-section-des {
 			width: 90%;
 			color: gray;
+			margin-bottom: 10px;
 			font-size: 0.9rem;
 		}
 		.reviews-container {

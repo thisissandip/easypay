@@ -3,7 +3,7 @@ import Header from "./components/Header/Header";
 import Layout from "./components/Layout/HeaderLayout";
 import PlanCard from "./components/Plans/PlanCard";
 import Services from "./components/Services/Services";
-import Themes from "./components/Themes/Themes";
+import TeamCard from "./components/Team/TeamCard";
 import Reviews from "./components/Reviews/Reviews";
 import { layoutdata, plansdata, reviewsdata } from "./layoutdata";
 
@@ -47,9 +47,13 @@ function App() {
 	));
 	return (
 		<div className='App'>
+			{/* Header Section */}
 			<Header />
+			{/* Services Section */}
 			<Services />
+			{/* Basic data - 2 Section */}
 			{layoutdatacomp}
+			{/* Plan Section */}
 			<section className='plans-section'>
 				<div className='plans-section-title'>
 					Unlock Full Power Of Our Services
@@ -61,7 +65,22 @@ function App() {
 				</div>
 				<div className='plans-container'>{plancards}</div>
 			</section>
-			{/* 	<section className='themes-section'></section> */}
+			{/* Team Section */}
+			<section className='team-section'>
+				<div className='team-section-title'>Meet the Team</div>
+				<div className='team-section-des'>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui nesciunt
+					quae eaque id reiciendis. Suscipit accusamus libero repudiandae nisi
+					aperiam?
+				</div>
+				<div className='team-container'>
+					<TeamCard />
+					<TeamCard />
+					<TeamCard />
+					<TeamCard />
+				</div>
+			</section>
+			{/* Review Section */}
 			<section className='reviews-section'>
 				<div className='reviews-section-title'>
 					What Our Customers Are Saying

@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../../Downloads/json_to_firestore"
 		}
 	],
 	"settings": {

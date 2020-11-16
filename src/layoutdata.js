@@ -163,3 +163,53 @@ export const reviewsdata = [
 		pos: "Python Enthu",
 	},
 ];
+
+export const teamdata = [
+	{
+		name: "Olive Yew",
+		pos: "CEO",
+		pic: "profile1.jpg",
+	},
+	{
+		name: "Maureen Biologist",
+		pos: "Biologist",
+		pic: "profile2.jpg",
+	},
+	{
+		name: "Allie Grater",
+		pos: "Senior Engineer",
+		pic: "profile3.jpg",
+	},
+	{
+		name: "Peg Legge",
+		pos: "Developer",
+		pic: "profile4.jpg",
+	},
+];
+
+export const faqdata = [
+	{
+		ques: "WHY MUST I MAKE PAYMENT IMMEDIATELY AT CHECKOUT?",
+		ans:
+			"Sample ordering is on ‘first-come-first-served’ basis. To ensure that you get your desired samples, it is recommended that you make your payment within 60 minutes of checking out.Sample ordering is on ‘first-come-first-served’ basis. To ensure that you get your desired samples, it is recommended that you make your payment within 60 minutes of checking out.",
+		open: false,
+	},
+	{
+		ques: "HOW MANY FREE SAMPLES CAN I REDEEM?",
+		ans:
+			"Due to the limited quantity, each member's account is only entitled to 1 unique free sample. You can check out up to 4 free samples in each checkout.",
+		open: false,
+	},
+	{
+		ques: "WHY IS THERE A CHECKOUT LIMIT?",
+		ans:
+			"Sample Store is a popular spot and gets lots of shoppers at a time. These limits are in place to make sure everyone has a good time trying and purchasing their products.Sample Store is a popular spot and gets lots of shoppers at a time. These limits are in place to make sure everyone has a good time trying and purchasing their products. ",
+		open: false,
+	},
+	{
+		ques: "HOW DO I CANCEL MY ORDERS BEFORE I MAKE A PAYMENT?",
+		ans:
+			"After logging into your account, go to your Shopping Cart. Here, you will be able to make payment or cancel your order. Note: We cannot give refunds once payment is verified. ",
+		open: false,
+	},
+];

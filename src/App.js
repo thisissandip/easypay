@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./components/Header/Header";
 import Layout from "./components/Layout/HeaderLayout";
 import PlanCard from "./components/Plans/PlanCard";
 import Services from "./components/Services/Services";
 import TeamCard from "./components/Team/TeamCard";
 import Reviews from "./components/Reviews/Reviews";
-import { layoutdata, plansdata, reviewsdata } from "./layoutdata";
+import FAQ from "./components/FAQ/Faq";
+import {
+	layoutdata,
+	plansdata,
+	reviewsdata,
+	teamdata,
+	faqdata,
+} from "./layoutdata";
 
 function App() {
-	console.log(layoutdata);
+	const [Faqcontent, setFaqcontent] = useState(faqdata);
+
 	const layoutdatacomp = layoutdata.map((item) => (
 		<Layout
 			key={item.layoutname}
@@ -45,6 +53,24 @@ function App() {
 			stars={item.stars}
 		/>
 	));
+
+	const teamcard = teamdata.map((item) => (
+		<TeamCard key={item.name} name={item.name} pic={item.pic} pos={item.pos} />
+	));
+
+	const toggleFAQ = (theindex) => {
+		setFaqcontent(
+			Faqcontent.map((item, i) => {
+				if (i === theindex) {
+					item.open = !item.open;
+				} else {
+					item.open = false;
+				}
+				return item;
+			})
+		);
+	};
+
 	return (
 		<div className='App'>
 			{/* Header Section */}
@@ -73,12 +99,7 @@ function App() {
 					quae eaque id reiciendis. Suscipit accusamus libero repudiandae nisi
 					aperiam?
 				</div>
-				<div className='team-container'>
-					<TeamCard />
-					<TeamCard />
-					<TeamCard />
-					<TeamCard />
-				</div>
+				<div className='team-container'>{teamcard}</div>
 			</section>
 			{/* Review Section */}
 			<section className='reviews-section'>
@@ -91,6 +112,30 @@ function App() {
 					aperiam?
 				</div>
 				<div className='reviews-container'>{reviewcards}</div>
+			</section>
+			{/* FAQ Section */}
+			<section className='faq-section'>
+				<div className='faq-section-title'>Frequently Asked Questions</div>
+				<div className='faq-section-des'>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui nesciunt
+					quae eaque id reiciendis. Suscipit accusamus libero repudiandae nisi
+					aperiam?
+				</div>
+				<div className='faq-cont'>
+					{Faqcontent.map((item, i) => (
+						<FAQ
+							key={i}
+							myindex={i}
+							question={item.ques}
+							ans={item.ans}
+							open={item.open}
+							toggleFAQ={toggleFAQ}
+						/>
+					))}
+				</div>
+				<div className='faq-foot'>
+					Haven't find suitable answer? Ask us below what you need.
+				</div>
 			</section>
 		</div>
 	);

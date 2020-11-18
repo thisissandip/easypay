@@ -5,6 +5,7 @@ import PlanCard from "./components/Plans/PlanCard";
 import Services from "./components/Services/Services";
 import TeamCard from "./components/Team/TeamCard";
 import Reviews from "./components/Reviews/Reviews";
+import Contact from "./components/Contact/Contact";
 import FAQ from "./components/FAQ/Faq";
 import {
 	layoutdata,
@@ -73,6 +74,7 @@ function App() {
 
 	return (
 		<div className='App'>
+			{/* Navbar */}
 			{/* Header Section */}
 			<Header />
 			{/* Services Section */}
@@ -137,6 +139,17 @@ function App() {
 					Haven't find suitable answer? Ask us below what you need.
 				</div>
 			</section>
+			{/* Contact Section */}
+			<section className='contact-section'>
+				<div className='contact-section-title'>Contact Us</div>
+				<div className='contact-section-des'>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui nesciunt
+					quae eaque id reiciendis. Suscipit accusamus libero repudiandae nisi
+					aperiam?
+				</div>
+				<Contact />
+			</section>
+			{/* Footer Section */}
 		</div>
 	);
 }

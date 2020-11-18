@@ -7,7 +7,7 @@
 	justify-content: center;
 	padding: 3rem 0;
 	width: 100%;
-	background-color: #f9f5ff;
+	background-color: rgb(245, 245, 245);
 	font-family: $poppins;
 
 	.faq-section-title {
@@ -33,6 +33,7 @@
 			background-color: $purple;
 			border-radius: 5px;
 			width: 60%;
+			max-width: 60rem;
 			transition: 0.5s all ease;
 			.faq-ans {
 				color: white;

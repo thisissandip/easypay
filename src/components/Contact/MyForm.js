@@ -1,10 +1,11 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
+import * as Yup from "yup";
 
 function MyForm() {
 	const initialValues = {
 		fname: "",
-		lname: "",
+		phone: "",
 		email: "",
 		message: "",
 	};
@@ -13,9 +14,16 @@ function MyForm() {
 		console.log("Form Values", values);
 	};
 
+	const validationSchema = Yup.object({
+		fname: Yup.string().required("Required"),
+	});
+
 	return (
 		<div className='my-form'>
-			<Formik initialValues={initialValues} onSubmit={onSubmit}>
+			<Formik
+				initialValues={initialValues}
+				onSubmit={onSubmit}
+				validationSchema={validationSchema}>
 				<Form>
 					<div className='form-control'>
 						<Field
@@ -29,7 +37,7 @@ function MyForm() {
 						{/* 	This is Phone Number Field */}
 						<input
 							type='text'
-							name='lname'
+							name='phone'
 							className='lname'
 							placeholder='Phone Number'
 						/>

@@ -1,5 +1,167 @@
+@import "../../index.scss";
 footer {
+	display: flex;
+	justify-content: center;
+	padding: 3rem;
 	width: 100%;
-	height: 50vh;
-	background-color: green;
+	background-color: $purple;
+	color: white;
+	font-family: $poppins;
+	a {
+		text-decoration: none;
+		color: white;
+	}
+	.footer-cont {
+		display: flex;
+		width: 1200px;
+		flex-wrap: wrap;
+		ul {
+			li {
+				list-style: none;
+				margin-bottom: 10px;
+			}
+		}
+		.foot-col-1 {
+			width: 35%;
+			min-width: 300px;
+			.company-logo {
+				font-size: 2rem;
+				font-weight: 600;
+				margin-bottom: 5px;
+			}
+			.company-des {
+				width: 90%;
+				margin-bottom: 10px;
+			}
+			.company-socials {
+				font-size: 2rem;
+				.company-soc {
+					margin-right: 5px;
+				}
+			}
+		}
+
+		.foot-col-2 {
+			.title-col-2 {
+				font-size: 1.5rem;
+				font-weight: 500;
+			}
+			width: 15%;
+			min-width: 140px;
+		}
+		.foot-col-3 {
+			flex: 1;
+			.title-col-3 {
+				font-size: 1.5rem;
+				font-weight: 500;
+			}
+			width: 18%;
+			min-width: 140px;
+		}
+		.foot-col-4 {
+			width: 29%;
+			.sub-title {
+				font-size: 1.5rem;
+				font-weight: 500;
+				margin-bottom: 10px;
+			}
+			input {
+				outline: none;
+				width: 100%;
+				font-size: 1rem;
+				padding: 0.5rem 0;
+				padding-left: 0.5rem;
+				border: none;
+				border-radius: 5px;
+				margin-bottom: 10px;
+			}
+			button {
+				outline: none;
+				width: 100%;
+				color: white;
+				font-size: 1rem;
+				padding: 0.8rem 0;
+				border: none;
+				background-color: $blue;
+				border-radius: 5px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	footer {
+		.footer-cont {
+			width: 980px;
+		}
+	}
+}
+
+@media screen and (max-width: 950px) {
+	footer {
+		.footer-cont {
+			position: relative;
+
+			.foot-col-1 {
+				width: 50%;
+				min-width: 150px;
+			}
+			.foot-col-2 {
+				width: 50%;
+			}
+			.foot-col-3 {
+				margin-top: 20px;
+				width: 50%;
+			}
+			.foot-col-4 {
+				margin-top: 20px;
+				width: 50%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	footer {
+		padding: 1.5rem;
+		.footer-cont {
+			flex-direction: column;
+			.foot-col-1 {
+				width: 100%;
+				margin-bottom: 10px;
+				.company-logo {
+					font-size: 1.7rem;
+				}
+				.company-des {
+					font-size: 0.9rem;
+					width: 100%;
+				}
+			}
+			.foot-col-2 {
+				width: 100%;
+				margin-bottom: 10px;
+				.title-col-2 {
+					font-size: 1.5rem;
+				}
+			}
+			.foot-col-3 {
+				margin-top: 0px;
+				width: 100%;
+				margin-bottom: 10px;
+				.title-col-3 {
+					font-size: 1.5rem;
+				}
+			}
+			.foot-col-4 {
+				margin-top: 0px;
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 400px) {
+	footer {
+		padding: 1.1rem;
+	}
 }

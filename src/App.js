@@ -6,6 +6,7 @@ import Services from "./components/Services/Services";
 import TeamCard from "./components/Team/TeamCard";
 import Reviews from "./components/Reviews/Reviews";
 import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 import FAQ from "./components/FAQ/Faq";
 import {
 	layoutdata,
@@ -150,6 +151,7 @@ function App() {
 				<Contact />
 			</section>
 			{/* Footer Section */}
+			<Footer />
 		</div>
 	);
 }

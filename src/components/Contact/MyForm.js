@@ -1,6 +1,7 @@
 import React from "react";
-import { Formik, Form, Field } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { BiErrorCircle } from "react-icons/bi";
 
 function MyForm() {
 	const initialValues = {
@@ -13,9 +14,15 @@ function MyForm() {
 	const onSubmit = (values) => {
 		console.log("Form Values", values);
 	};
+	const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
 	const validationSchema = Yup.object({
 		fname: Yup.string().required("Required"),
+		phone: Yup.string()
+			.matches(phoneRegExp, "Not a Valid Phone Number")
+			.required("Required!"),
+		email: Yup.string().email("Invalid email format").required("Required"),
+		message: Yup.string().required("Ask us Anything! Don't be shy!"),
 	});
 
 	return (
@@ -32,13 +39,20 @@ function MyForm() {
 							className='fname'
 							placeholder='First Name'
 						/>
+						{/* 						<ErrorMessage name='fname'>
+							{(error) => (
+								<>
+									<div className='hover-msg'>{error}</div>
+								</>
+							)}
+						</ErrorMessage> */}
 					</div>
 					<div className='form-control'>
 						{/* 	This is Phone Number Field */}
-						<input
+						<Field
 							type='text'
 							name='phone'
-							className='lname'
+							className='phone'
 							placeholder='Phone Number'
 						/>
 					</div>
@@ -48,11 +62,10 @@ function MyForm() {
 							type='email'
 							name='email'
 							className='email'
-							placeholder='Email'
-						/>
+							placeholder='Email'></Field>
 					</div>
 
-					<div className='form-control'>
+					<div className='form-control message-control'>
 						<Field
 							as='textarea'
 							name='message'
@@ -61,9 +74,7 @@ function MyForm() {
 						/>
 					</div>
 					<div className='form-control'>
-						{" "}
 						<button className='sub-btn' type='submit'>
-							{" "}
 							Send
 						</button>
 					</div>

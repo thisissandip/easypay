@@ -13,7 +13,7 @@ function Services() {
 	));
 
 	return (
-		<section className='services-section'>
+		<section id='services' className='services-section'>
 			<div className='services-title'>Our Services</div>
 			<div className='services-container'>
 				<div className='services-list-container'>

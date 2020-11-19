@@ -83,7 +83,7 @@ function App() {
 			{/* Basic data - 2 Section */}
 			{layoutdatacomp}
 			{/* Plan Section */}
-			<section className='plans-section'>
+			<section id='plans' className='plans-section'>
 				<div className='plans-section-title'>
 					Unlock Full Power Of Our Services
 				</div>
@@ -105,7 +105,7 @@ function App() {
 				<div className='team-container'>{teamcard}</div>
 			</section>
 			{/* Review Section */}
-			<section className='reviews-section'>
+			<section id='reviews' className='reviews-section'>
 				<div className='reviews-section-title'>
 					What Our Customers Are Saying
 				</div>
@@ -117,7 +117,7 @@ function App() {
 				<div className='reviews-container'>{reviewcards}</div>
 			</section>
 			{/* FAQ Section */}
-			<section className='faq-section'>
+			<section id='faq' className='faq-section'>
 				<div className='faq-section-title'>Frequently Asked Questions</div>
 				<div className='faq-section-des'>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui nesciunt
@@ -141,7 +141,7 @@ function App() {
 				</div>
 			</section>
 			{/* Contact Section */}
-			<section className='contact-section'>
+			<section id='contact' className='contact-section'>
 				<div className='contact-section-title'>Contact Us</div>
 				<div className='contact-section-des'>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui nesciunt

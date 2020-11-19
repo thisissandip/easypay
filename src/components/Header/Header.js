@@ -1,10 +1,12 @@
 import React from "react";
+import Navbar from "../Navbar/Navbar";
 import "./header.scss";
 
 function Header() {
 	return (
 		<>
-			<header>
+			<header id='header'>
+				<Navbar />
 				<svg
 					className='wave'
 					xmlns='http://www.w3.org/2000/svg'

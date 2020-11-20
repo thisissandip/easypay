@@ -18,7 +18,7 @@ header {
 	}
 
 	.header-container {
-		margin-top: 30px;
+		height: 100vh;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -134,15 +134,16 @@ header::before {
 
 @media screen and (max-width: 800px) {
 	header {
-		overflow: hidden;
 		height: 100%;
 		.wave {
-			width: 300%;
+			overflow-x: hidden;
+			width: 100%;
 		}
 		.header-container {
+			height: auto;
 			flex-direction: column;
 			justify-content: flex-start;
-			margin-top: 4vh;
+			margin-top: 12vh;
 
 			width: 100vw;
 			.header-left-container {

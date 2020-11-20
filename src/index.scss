@@ -7,6 +7,10 @@
 	scroll-behavior: smooth;
 }
 
+body {
+	overflow-x: hidden;
+}
+
 $poppins: "Poppins", sans-serif;
 $blue: #fa6251; // #5714ff;
 $purple: #6b35b8;

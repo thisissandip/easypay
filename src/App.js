@@ -95,7 +95,7 @@ function App() {
 				<div className='plans-container'>{plancards}</div>
 			</section>
 			{/* Team Section */}
-			<section className='team-section'>
+			<section id='team' className='team-section'>
 				<div className='team-section-title'>Meet the Team</div>
 				<div className='team-section-des'>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui nesciunt

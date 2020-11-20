@@ -1,9 +1,118 @@
+@import "../../index.scss";
+
 nav {
+	display: flex;
+	justify-content: center;
 	position: sticky;
 	top: 0;
-	z-index: 10;
+	z-index: 1000;
+	font-family: $poppins;
+	color: white;
 	width: 100%;
-	height: 4rem;
+	padding: 0.5rem 0;
 	border: 1px solid green;
-	background-color: transparent;
+	.nav-cont {
+		display: flex;
+		justify-content: space-between;
+		width: 1380px;
+		.logo {
+			font-size: 2rem;
+			font-weight: 600;
+		}
+		.ham-btn {
+			display: none;
+		}
+		ul {
+			.menu-close-btn {
+				display: none;
+			}
+			display: flex;
+			align-items: center;
+			li {
+				list-style: none;
+				margin-right: 40px;
+				a {
+					font-size: 1.1rem;
+					color: white;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1550px) {
+	nav {
+		.nav-cont {
+			width: 90vw;
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	nav {
+		.nav-cont {
+			ul {
+				li {
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	nav {
+		.nav-cont {
+			align-items: center;
+			.ham-btn {
+				cursor: pointer;
+				font-size: 2rem;
+				display: initial;
+			}
+			ul {
+				.menu-close-btn {
+					font-size: 1rem;
+					display: initial;
+					position: absolute;
+					top: 1.5rem;
+					right: 3rem;
+				}
+				display: none;
+				right: -1rem;
+				top: 0rem;
+				flex-direction: column;
+				align-items: flex-start;
+				width: 300px;
+				padding-left: 30px;
+				padding-top: 50px;
+				height: 100vh;
+				background-color: white;
+				position: absolute;
+				li:first-child {
+					margin-top: 20px;
+				}
+				li {
+					margin-bottom: 20px;
+					a {
+						color: black;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 400px) {
+	nav {
+		.nav-cont {
+			.logo {
+				font-size: 1.5rem;
+			}
+			.ham-btn {
+				font-size: 1.5rem;
+				display: initial;
+			}
+		}
+	}
 }

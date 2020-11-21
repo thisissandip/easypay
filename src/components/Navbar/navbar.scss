@@ -46,6 +46,7 @@ nav {
 				list-style: none;
 				margin-right: 40px;
 				a {
+					cursor: pointer;
 					font-size: 1.1rem;
 					color: white;
 					text-decoration: none;
@@ -80,6 +81,7 @@ nav {
 		.nav-cont {
 			align-items: center;
 			.ham-btn {
+				color: white;
 				cursor: pointer;
 				font-size: 2rem;
 				display: initial;
@@ -93,10 +95,11 @@ nav {
 					top: 1.5rem;
 					right: 1.5rem;
 				}
-				position: absolute;
+				position: fixed;
 				top: 0rem;
-				right: 0;
-				width: 100%;
+				right: -100%;
+				width: 70%;
+				max-width: 300px;
 				flex-direction: column;
 				align-items: flex-start;
 				padding-left: 30px;

@@ -6,6 +6,12 @@ import "./navbar.scss";
 function Navbar() {
 	const [navbarbg, setnavbarbg] = useState(null);
 
+	const scrollToDiv = (id) => {
+		let top = document.querySelector(`#${id}`).offsetTop;
+		let mytop = top - 50;
+		window.scrollTo(0, mytop);
+	};
+
 	const showmenu = () => {
 		const sidebar = document.querySelector(".nav-links");
 		sidebar.style.right = "0%";
@@ -27,34 +33,61 @@ function Navbar() {
 		<nav className={navbarbg && `nav-bg`}>
 			<div className={navbarbg ? `nav-cont scrolled` : `nav-cont`}>
 				<div className='logo'>
-					<a href='#header'>THEAPP</a>{" "}
+					<a
+						href='#header'
+						onClick={() => {
+							scrollToDiv("header");
+							hidemenu();
+						}}>
+						EasyPay
+					</a>
 				</div>
 				<FiMenu onClick={showmenu} className='ham-btn' />
 				<ul className='nav-links'>
 					<GrClose onClick={hidemenu} className='menu-close-btn' />
 
 					<li className='nav-item'>
-						<a onClick={hidemenu} href='#services'>
+						<a
+							onClick={() => {
+								scrollToDiv("services");
+								hidemenu();
+							}}>
 							Services
 						</a>
 					</li>
 					<li className='nav-item'>
-						<a href='#plans' onClick={hidemenu}>
+						<a
+							onClick={() => {
+								scrollToDiv("plans");
+								hidemenu();
+							}}>
 							Pricing
 						</a>
 					</li>
 					<li className='nav-item'>
-						<a href='#team' onClick={hidemenu}>
+						<a
+							onClick={() => {
+								scrollToDiv("team");
+								hidemenu();
+							}}>
 							Team
 						</a>
 					</li>
 					<li className='nav-item'>
-						<a href='#reviews' onClick={hidemenu}>
+						<a
+							onClick={() => {
+								scrollToDiv("reviews");
+								hidemenu();
+							}}>
 							Reviews
 						</a>
 					</li>
 					<li className='nav-item'>
-						<a href='#contact' onClick={hidemenu}>
+						<a
+							onClick={() => {
+								scrollToDiv("contact");
+								hidemenu();
+							}}>
 							Contact
 						</a>
 					</li>

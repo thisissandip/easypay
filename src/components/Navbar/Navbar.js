@@ -24,7 +24,7 @@ function Navbar() {
 	};
 
 	window.onscroll = () => {
-		document.scrollingElement.scrollTop > 100
+		document.scrollingElement.scrollTop > 40
 			? setnavbarbg(true)
 			: setnavbarbg(false);
 	};

@@ -1,11 +1,12 @@
-@import "../../index.scss";
+@import '../../index.scss';
 
 .reviews-section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 4rem 0;
+	padding: 2.5rem 0;
+	padding-bottom: 1.5rem;
 	width: 100%;
 	background-color: #fff;
 	font-family: $poppins;
@@ -26,11 +27,15 @@
 
 	.reviews-container {
 		display: flex;
+		justify-content: center;
+		width: 95%;
+		flex-wrap: wrap;
 		.reviews-card {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-evenly;
 			margin: 0 1rem;
+			margin-bottom: 45px;
 			width: 380px;
 			background-color: #fff;
 			border: 1px solid gainsboro;
@@ -104,7 +109,7 @@
 	}
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 750px) {
 	.reviews-section {
 		padding: 3rem 0;
 		.reviews-section-title {
@@ -120,7 +125,7 @@
 			flex-direction: column;
 			align-items: center;
 			.reviews-card {
-				width: 55%;
+				width: 65%;
 				margin: 1rem 1rem;
 				min-width: 370px;
 				transition: 0.3s all ease;
@@ -139,9 +144,9 @@
 	.reviews-section {
 		padding: 2.3rem 0;
 		.reviews-section-title {
-			width: 95%;
+			width: 92%;
 			text-align: center;
-			font-size: 1.6rem;
+			font-size: 1.7rem;
 			line-height: 1.9rem;
 			margin-bottom: 10px;
 		}
@@ -157,7 +162,7 @@
 			align-items: center;
 			.reviews-card {
 				margin: 1rem 0;
-				min-width: 90vw;
+				min-width: 85vw;
 				transition: 0.3s all ease;
 				&:hover {
 					transform: none;

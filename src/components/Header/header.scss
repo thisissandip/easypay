@@ -1,10 +1,20 @@
 @import '../../index.scss';
 
+.slash {
+	position: absolute;
+	width: 200%;
+	height: 160px;
+
+	bottom: -6rem;
+	transform: rotateZ(-5deg);
+}
+
 header {
 	position: relative;
 	width: 100%;
 	height: 800px;
-	background: url('./headerbg3.jpg') no-repeat center;
+	//background: url('./headerbg3.jpg') no-repeat center;
+	background-color: #f3fdfe;
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
@@ -14,7 +24,7 @@ header {
 
 	.header-container {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		height: 100%;
 		width: 90%;
 		max-width: 1380px;
@@ -33,11 +43,13 @@ header {
 				font-weight: 700;
 				line-height: 3.2rem;
 				color: white;
+				/* color: #000; */
 				transition: 0.1s all ease;
 			}
 			.left-des {
 				margin-top: 1rem;
 				color: white;
+				/* color: #000; */
 				transition: 0.1s all ease;
 			}
 			.left-btns-cont {
@@ -90,6 +102,7 @@ header::before {
 	width: 100%;
 	height: 100%;
 	background: linear-gradient(to bottom right, $blue, $purple);
+	//background: rgba($color: #ffffff, $alpha: 1);
 	opacity: 0.9;
 	z-index: 0;
 }
@@ -129,7 +142,7 @@ header::before {
 	}
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
 	header {
 		height: 100%;
 		.header-container {

@@ -1,11 +1,12 @@
-@import "../../index.scss";
+@import '../../index.scss';
 
 .faq-section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 3rem 0;
+	padding: 2rem 0;
+	padding-bottom: 3rem;
 	width: 100%;
 	background-color: rgb(245, 245, 245);
 	font-family: $poppins;
@@ -110,7 +111,7 @@
 
 @media screen and (max-width: 700px) {
 	.faq-section {
-		padding: 1.1rem;
+		padding: 2.5rem 0.5rem;
 		.faq-section-title {
 			width: 100%;
 			text-align: center;
@@ -127,7 +128,7 @@
 		}
 		.faq-cont {
 			.faq-card {
-				width: 99%;
+				width: 90%;
 				.faq-ans {
 					overflow: hidden;
 					font-size: 0.9rem;
@@ -148,7 +149,7 @@
 
 @media screen and (max-width: 380px) {
 	.faq-section {
-		padding: 1rem;
+		padding: 1.5rem;
 		.faq-section-title {
 			width: 100%;
 			text-align: center;

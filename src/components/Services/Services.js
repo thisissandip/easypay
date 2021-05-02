@@ -10,7 +10,8 @@ function Services() {
 
 	return (
 		<section id='services' className='services-section'>
-			<div className='services-title'>Our Services</div>
+			<div className='services-blob'></div>
+			<div className='services-title'>Services</div>
 			<div className='services-container'>
 				<div className='services-list-container'>
 					<div className='service-row-1'>{services1}</div>

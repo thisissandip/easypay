@@ -1,8 +1,8 @@
-@import "../../index.scss";
+@import '../../index.scss';
 
 .team-section {
 	display: flex;
-	padding: 4rem 0;
+	padding: 2rem 0;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
@@ -34,12 +34,9 @@
 			width: 280px;
 			height: 280px;
 			border-radius: 5px;
-			box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.2);
 			transition: 0.2s all ease;
 			margin: 1rem;
-			&:hover {
-				box-shadow: 0 5px 30px rgba($color: #000000, $alpha: 0.5);
-			}
+
 			&:hover .team-card-overlay {
 				height: 100%;
 			}
@@ -136,7 +133,7 @@
 		.team-section-title {
 			width: 90%;
 			margin-bottom: 0.2rem;
-			font-size: 1.5rem;
+			font-size: 1.7rem;
 		}
 		.team-section-des {
 			width: 90%;

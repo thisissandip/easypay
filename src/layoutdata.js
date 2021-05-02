@@ -7,8 +7,8 @@ export const layoutdata = [
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolor ut iusto vitae autem neque eum ipsam, impedit asperiores vel cumque laborum dicta r.',
 		],
 		features: false,
-		/* 	background: "white", */
-		background: ' #f9f5ff',
+		background: 'white',
+		/* background: ' #f9f5ff', */
 		color: 'black',
 		button: ['Learn More', "Let's do this"],
 		imgname: 'diffcards.png',
@@ -17,7 +17,8 @@ export const layoutdata = [
 	{
 		layoutname: 'cashback',
 		title: 'A fully integrated suite of payments products',
-		background: '#fafafa',
+		/* 	background: '#fafafa', */
+		background: 'white',
 		color: 'black',
 		features: true,
 		des: [

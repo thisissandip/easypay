@@ -1,14 +1,19 @@
 @import '../../index.scss';
 
 .services-section {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-
 	padding: 1rem 0;
-	padding-bottom: 4rem;
+	padding-bottom: 3rem;
+	.services-blob {
+		position: absolute;
+		top: 0;
+		z-index: 10;
+	}
 	.services-title {
 		text-align: center;
 		font-family: $poppins;
@@ -28,10 +33,11 @@
 			.service-row-1 {
 				display: grid;
 				grid-template-columns: repeat(3, 1fr);
-				grid-gap: 2.3rem;
+				grid-gap: 2.5rem;
 			}
 
 			.single-service {
+				cursor: pointer;
 				display: flex;
 				align-items: center;
 				flex-direction: column;
@@ -42,15 +48,9 @@
 				text-align: center;
 				margin-bottom: 10px;
 				color: grey;
-				padding: 2rem;
-				background-color: white;
-				border-radius: 20px;
-				box-shadow: 0 0 20px rgba($color: #414141, $alpha: 0.1);
-				transition: all 0.3s ease;
-				&:hover {
-					transform: translateY(-5%);
-				}
-
+				padding: 1.7rem;
+				border: 1px solid rgba($color: #000000, $alpha: 0.1);
+				border-radius: 15px;
 				.single-service-title {
 					font-size: 1.5rem;
 					line-height: 1.7rem;
@@ -93,13 +93,12 @@
 	.services-section {
 		padding-bottom: 30px;
 		.services-title {
-			font-size: 2rem;
+			font-size: 1.8rem;
 			font-weight: 600;
 			margin: 0rem 0;
-			margin-top: 10px;
 		}
 		.services-container {
-			padding: 20px 10px 0 10px;
+			padding: 10px 10px 0 10px;
 			.services-list-container {
 				.service-row-1 {
 					grid-template-columns: repeat(1, 1fr);

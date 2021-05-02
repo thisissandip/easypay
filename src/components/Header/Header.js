@@ -7,7 +7,6 @@ function Header() {
 		<>
 			<header id='header'>
 				<Navbar />
-
 				<div className='header-container'>
 					<div className='header-left-container'>
 						<div className='left-title'>
@@ -33,6 +32,7 @@ function Header() {
 						/>
 					</div>
 				</div>
+				<div className='slash'></div>
 			</header>
 		</>
 	);

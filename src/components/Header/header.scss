@@ -1,44 +1,45 @@
-@import "../../index.scss";
+@import '../../index.scss';
 
 header {
 	position: relative;
 	width: 100%;
-	height: 100vh;
-	background: url("./headerbg3.jpg") no-repeat center;
+	height: 800px;
+	background: url('./headerbg3.jpg') no-repeat center;
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	transition: 0.2s all ease;
-
-	.wave {
-		position: absolute;
-		bottom: 0;
-		z-index: 2;
-	}
+	border: 1px solid red;
+	overflow: hidden;
 
 	.header-container {
-		height: 100vh;
 		display: flex;
-		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
+		height: 100%;
 		width: 90%;
 		max-width: 1380px;
 		position: relative;
 		z-index: 5;
 		font-family: $poppins;
+
 		.header-left-container {
-			margin-top: -4rem;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 			width: 50%;
 			.left-title {
-				font-size: 3.2rem;
+				font-size: 3rem;
 				font-weight: 700;
-				line-height: 4.2rem;
+				line-height: 3.2rem;
 				color: white;
+				transition: 0.1s all ease;
 			}
 			.left-des {
 				margin-top: 1rem;
 				color: white;
+				transition: 0.1s all ease;
 			}
 			.left-btns-cont {
 				margin-top: 1.5rem;
@@ -73,16 +74,19 @@ header {
 			}
 		}
 
-		.header-phone {
-			margin-top: 2rem;
-			margin-right: 0rem;
-			width: 350px;
+		.header-right-container {
+			position: relative;
+			.header-phone {
+				margin-top: 100px;
+				width: 500px;
+				transition: 0.1s all ease;
+			}
 		}
 	}
 }
 
 header::before {
-	content: "";
+	content: '';
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -91,82 +95,74 @@ header::before {
 	z-index: 0;
 }
 
-// wide screen
-@media screen and (max-width: 1550px) {
-	header {
-		.header-container {
-			width: 90vw;
-			.header-left-container {
-				margin-top: -6rem;
-			}
-		}
-	}
-}
-
 // left content size screen
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1100px) {
 	header {
 		.header-container {
-			/* 	width: 90vw; */
 			.header-left-container {
-				margin-top: -5rem;
 				.left-title {
 					font-size: 2.5rem;
 					line-height: 3rem;
 				}
 			}
-
-			.header-phone {
-				margin-right: 0rem;
-				width: 350px;
+			.header-right-container {
+				.header-phone {
+					margin-right: -2rem;
+				}
 			}
 		}
 	}
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 1000px) {
 	header {
 		.header-container {
 			width: 90vw;
+			.header-right-container {
+				position: relative;
+				.header-phone {
+					margin-top: 120px;
+					width: 460px;
+					margin-right: -2rem;
+				}
+			}
 		}
 	}
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
 	header {
 		height: 100%;
-		.wave {
-			overflow-x: hidden;
-			width: 100%;
-		}
 		.header-container {
-			height: auto;
 			flex-direction: column;
 			justify-content: flex-start;
-			margin-top: 12vh;
-
+			margin-top: 16vh;
+			align-items: center;
 			width: 100vw;
 			.header-left-container {
-				margin-top: 0rem;
+				margin-top: -1rem;
 				text-align: center;
 				width: 90%;
 				.left-title {
-					text-align: left;
+					text-align: center;
 					font-size: 2.5rem;
 					line-height: 3rem;
 				}
 				.left-des {
-					text-align: left;
+					text-align: center;
 				}
 				.left-btns-cont {
-					justify-content: left;
+					justify-content: center;
 				}
 			}
-
-			.header-phone {
-				margin-top: 3rem;
-				margin-right: 0rem;
-				width: 350px;
+			.header-right-container {
+				display: flex;
+				justify-content: center;
+				.header-phone {
+					margin-top: 2rem;
+					margin-right: 0rem;
+					width: 90%;
+				}
 			}
 		}
 	}
@@ -199,7 +195,6 @@ header::before {
 
 			.header-phone {
 				margin-top: 1.5rem;
-				margin-right: 0rem;
 				width: 280px;
 			}
 		}
@@ -229,19 +224,8 @@ header::before {
 
 			.header-phone {
 				margin-top: 1.5rem;
-				margin-right: 0rem;
 				width: 250px;
 			}
 		}
 	}
 }
-
-/* // less than 800px screen
-@media screen and (max-width: 900px){
-  header {
-    .header-container {
-      flex-direction: column;
-      width: 100vw;
-    }
-  }
-} */

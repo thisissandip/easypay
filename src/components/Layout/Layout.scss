@@ -1,4 +1,4 @@
-@import "../../index.scss";
+@import '../../index.scss';
 
 .layout-section {
 	position: relative;
@@ -242,13 +242,3 @@
 		}
 	}
 }
-
-/* // less than 800px screen
-@media screen and (max-width: 900px){
-  header {
-    .layout-container {
-      flex-direction: column;
-      width: 100vw;
-    }
-  }
-} */

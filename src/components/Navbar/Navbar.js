@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { FiMenu } from "react-icons/fi";
-import { GrClose } from "react-icons/gr";
-import "./navbar.scss";
+import React, { useState } from 'react';
+import { FiMenu } from 'react-icons/fi';
+import { GrClose } from 'react-icons/gr';
+import './navbar.scss';
 
 function Navbar() {
 	const [navbarbg, setnavbarbg] = useState(null);
@@ -13,13 +13,13 @@ function Navbar() {
 	};
 
 	const showmenu = () => {
-		const sidebar = document.querySelector(".nav-links");
-		sidebar.style.right = "0%";
+		const sidebar = document.querySelector('.nav-links');
+		sidebar.style.right = '0%';
 	};
 
 	const hidemenu = () => {
-		const sidebar = document.querySelector(".nav-links");
-		sidebar.style.right = "-100%";
+		const sidebar = document.querySelector('.nav-links');
+		sidebar.style.right = '-100%';
 		/* sidebar.style.display = "none"; */
 	};
 
@@ -36,7 +36,7 @@ function Navbar() {
 					<a
 						href='#header'
 						onClick={() => {
-							scrollToDiv("header");
+							scrollToDiv('header');
 							hidemenu();
 						}}>
 						EasyPay
@@ -49,7 +49,7 @@ function Navbar() {
 					<li className='nav-item'>
 						<a
 							onClick={() => {
-								scrollToDiv("services");
+								scrollToDiv('services');
 								hidemenu();
 							}}>
 							Services
@@ -58,7 +58,7 @@ function Navbar() {
 					<li className='nav-item'>
 						<a
 							onClick={() => {
-								scrollToDiv("plans");
+								scrollToDiv('plans');
 								hidemenu();
 							}}>
 							Pricing
@@ -67,7 +67,7 @@ function Navbar() {
 					<li className='nav-item'>
 						<a
 							onClick={() => {
-								scrollToDiv("team");
+								scrollToDiv('team');
 								hidemenu();
 							}}>
 							Team
@@ -76,7 +76,7 @@ function Navbar() {
 					<li className='nav-item'>
 						<a
 							onClick={() => {
-								scrollToDiv("reviews");
+								scrollToDiv('reviews');
 								hidemenu();
 							}}>
 							Reviews
@@ -85,13 +85,17 @@ function Navbar() {
 					<li className='nav-item'>
 						<a
 							onClick={() => {
-								scrollToDiv("contact");
+								scrollToDiv('contact');
 								hidemenu();
 							}}>
 							Contact
 						</a>
 					</li>
 				</ul>
+				{/* 	<div className='btns-container'>
+					<button>Login</button>
+					<button>Sign Up</button>
+				</div> */}
 			</div>
 		</nav>
 	);

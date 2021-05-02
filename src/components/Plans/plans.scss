@@ -156,7 +156,7 @@
 			flex-direction: column;
 			align-items: center;
 			.plan-card-container {
-				margin: 0.8rem 0rem;
+				margin: 1rem 0rem;
 				width: 50%;
 				min-width: 310px;
 				padding: 2rem;
@@ -180,8 +180,7 @@
 
 @media screen and (max-width: 600px) {
 	.plans-section {
-		padding: 2rem 0;
-		padding-bottom: 4rem;
+		padding-bottom: 2rem;
 		width: 100%;
 		.plans-section-title {
 			width: 90%;
@@ -195,6 +194,11 @@
 			font-size: 0.9rem;
 			text-align: center;
 			margin-bottom: 10px;
+		}
+		.plans-container {
+			.plan-card-container {
+				min-width: 90vw;
+			}
 		}
 	}
 }

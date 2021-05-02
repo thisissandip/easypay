@@ -1,4 +1,4 @@
-@import "../../index.scss";
+@import '../../index.scss';
 
 .nav-bg {
 	background-color: $purple;
@@ -18,12 +18,13 @@ nav {
 	font-family: $poppins;
 	color: white;
 	width: 100%;
-	padding: 0.5rem 0;
+	padding: 1rem 0;
 	transition: 0.4s all ease;
 	.nav-cont {
 		display: flex;
 		justify-content: space-between;
-		width: 1380px;
+		width: 90%;
+		max-width: 1380px;
 		.logo {
 			font-size: 2rem;
 			font-weight: 600;
@@ -51,6 +52,9 @@ nav {
 					color: white;
 					text-decoration: none;
 				}
+				&:last-child {
+					margin-right: 0px;
+				}
 			}
 		}
 	}
@@ -76,7 +80,7 @@ nav {
 	}
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
 	nav {
 		.nav-cont {
 			align-items: center;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./components/Header/Header";
 import Layout from "./components/Layout/HeaderLayout";
 import PlanCard from "./components/Plans/PlanCard";
@@ -8,6 +8,7 @@ import Reviews from "./components/Reviews/Reviews";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import FAQ from "./components/FAQ/Faq";
+import { AiOutlineArrowUp } from "react-icons/ai";
 import {
 	layoutdata,
 	plansdata,
@@ -73,8 +74,26 @@ function App() {
 		);
 	};
 
+	useEffect(() => {
+		window.addEventListener("scroll", () => {
+			const topbtn = document.querySelector(".back-to-top-btn");
+			if (window.pageYOffset > 300) {
+				topbtn.style.display = "flex";
+			} else {
+				topbtn.style.display = "none";
+			}
+		});
+	}, []);
+
 	return (
 		<div className='App'>
+			<div className='back-to-top-btn'>
+				<AiOutlineArrowUp
+					onClick={() => {
+						document.querySelector("#header").scrollIntoView();
+					}}
+				/>
+			</div>
 			{/* Navbar */}
 			{/* Header Section */}
 			<Header />

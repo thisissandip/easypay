@@ -1,7 +1,6 @@
 import React from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
-import { BiErrorCircle } from "react-icons/bi";
 
 function MyForm() {
 	const initialValues = {

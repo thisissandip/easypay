@@ -7,7 +7,7 @@ export const layoutdata = [
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolor ut iusto vitae autem neque eum ipsam, impedit asperiores vel cumque laborum dicta r.',
 		],
 		features: false,
-		background: 'white',
+		background: '#EFF8FC',
 		/* background: ' #f9f5ff', */
 		color: 'black',
 		button: ['Learn More', "Let's do this"],
@@ -18,7 +18,7 @@ export const layoutdata = [
 		layoutname: 'cashback',
 		title: 'A fully integrated suite of payments products',
 		/* 	background: '#fafafa', */
-		background: 'white',
+		background: '#fff',
 		color: 'black',
 		features: true,
 		des: [
@@ -27,7 +27,7 @@ export const layoutdata = [
 			'Marketing chart dolor sit amet, consectetur adipisicing elit. Facere, nobis, id expedita dolores officiis laboriosam.',
 		],
 		button: null,
-		button: ['Learn More'],
+		button: ['Learn More', 'See More'],
 		imgname: 'cashback.png',
 		imgclassname: 'cashbackimg',
 	},

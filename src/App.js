@@ -1,21 +1,20 @@
-import React, { useState, useEffect } from "react";
-import Header from "./components/Header/Header";
-import Layout from "./components/Layout/HeaderLayout";
-import PlanCard from "./components/Plans/PlanCard";
-import Services from "./components/Services/Services";
-import TeamCard from "./components/Team/TeamCard";
-import Reviews from "./components/Reviews/Reviews";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
-import FAQ from "./components/FAQ/Faq";
-import { AiOutlineArrowUp } from "react-icons/ai";
+import React, { useState, useEffect } from 'react';
+import Header from './components/Header/Header';
+import Layout from './components/Layout/HeaderLayout';
+import PlanCard from './components/Plans/PlanCard';
+import Services from './components/Services/Services';
+import TeamCard from './components/Team/TeamCard';
+import Reviews from './components/Reviews/Reviews';
+import Footer from './components/Footer/Footer';
+import FAQ from './components/FAQ/Faq';
+import { AiOutlineArrowUp } from 'react-icons/ai';
 import {
 	layoutdata,
 	plansdata,
 	reviewsdata,
 	teamdata,
 	faqdata,
-} from "./layoutdata";
+} from './layoutdata';
 
 function App() {
 	const [Faqcontent, setFaqcontent] = useState(faqdata);
@@ -75,12 +74,12 @@ function App() {
 	};
 
 	useEffect(() => {
-		window.addEventListener("scroll", () => {
-			const topbtn = document.querySelector(".back-to-top-btn");
+		window.addEventListener('scroll', () => {
+			const topbtn = document.querySelector('.back-to-top-btn');
 			if (window.pageYOffset > 300) {
-				topbtn.style.display = "flex";
+				topbtn.style.display = 'flex';
 			} else {
-				topbtn.style.display = "none";
+				topbtn.style.display = 'none';
 			}
 		});
 	}, []);
@@ -90,7 +89,7 @@ function App() {
 			<div className='back-to-top-btn'>
 				<AiOutlineArrowUp
 					onClick={() => {
-						document.querySelector("#header").scrollIntoView();
+						document.querySelector('#header').scrollIntoView();
 					}}
 				/>
 			</div>
@@ -104,7 +103,8 @@ function App() {
 			{/* Plan Section */}
 			<section id='plans' className='plans-section'>
 				<div className='plans-section-title'>
-					Unlock Full Power Of Our Services
+					<span className='unlock-title'>Unlock</span> Full Power Of Our
+					Services
 				</div>
 				<div className='plans-section-des'>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui nesciunt
@@ -160,15 +160,7 @@ function App() {
 				</div>
 			</section>
 			{/* Contact Section */}
-			<section id='contact' className='contact-section'>
-				<div className='contact-section-title'>Contact Us</div>
-				<div className='contact-section-des'>
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui nesciunt
-					quae eaque id reiciendis. Suscipit accusamus libero repudiandae nisi
-					aperiam?
-				</div>
-				<Contact />
-			</section>
+
 			{/* Footer Section */}
 			<Footer />
 		</div>

@@ -26,7 +26,7 @@ function Header() {
 
 					<div className='header-right-container'>
 						<img
-							src={'/imgs/Card copy.png'}
+							src={'/imgs/headerphone.png'}
 							className='header-phone'
 							loading='lazy'
 						/>

@@ -1,10 +1,10 @@
-@import "../../index.scss";
+@import '../../index.scss';
 .github-link {
 	display: flex;
 	justify-content: center;
-	background-color: $purple;
+	background-color: #05358f;
 	padding: 1rem 0;
-	color: white;
+	color: #fff;
 	font-family: $poppins;
 	a {
 		margin-left: 5px;
@@ -14,23 +14,23 @@
 footer {
 	display: flex;
 	justify-content: center;
-	padding: 3rem;
+	padding: 4rem 3rem;
 	padding-bottom: 0rem;
 	width: 100%;
-	background-color: $purple;
-	color: white;
+	background-color: #05358f;
+	color: #fff;
 	font-family: $poppins;
 	a {
 		text-decoration: none;
-		color: white;
+		color: #fff;
 	}
 
 	.footer-cont {
 		display: flex;
-		width: 1200px;
+		width: 90%;
+		width: 1380px;
 		flex-wrap: wrap;
 		padding-bottom: 1.5rem;
-		border-bottom: 1px solid white;
 		ul {
 			li {
 				list-style: none;
@@ -92,23 +92,16 @@ footer {
 				margin-bottom: 10px;
 			}
 			button {
+				cursor: pointer;
 				outline: none;
 				width: 100%;
 				color: white;
 				font-size: 1rem;
 				padding: 0.8rem 0;
 				border: none;
-				background-color: $blue;
+				background-color: #465be3;
 				border-radius: 5px;
 			}
-		}
-	}
-}
-
-@media screen and (max-width: 1300px) {
-	footer {
-		.footer-cont {
-			width: 980px;
 		}
 	}
 }
@@ -146,6 +139,7 @@ footer {
 		padding: 1.5rem;
 		padding-bottom: 0rem;
 		.footer-cont {
+			width: 95%;
 			flex-direction: column;
 			.foot-col-1 {
 				width: 100%;

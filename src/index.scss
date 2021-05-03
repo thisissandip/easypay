@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap');
 
 * {
 	margin: 0;
@@ -11,9 +11,16 @@ body {
 	overflow-x: hidden;
 }
 
-$poppins: "Poppins", sans-serif;
+$poppins: 'Poppins', sans-serif;
 $blue: #fa6251; // #5714ff;
 $purple: #6b35b8;
+
+$primary-font-color: #2e2b2c;
+$orange: #fa7e75;
+$my-purple: rgb(225, 234, 251);
+
+$primary-color: #f9dfc8;
+$secondary-color: #77acf1;
 
 .back-to-top-btn {
 	cursor: pointer;

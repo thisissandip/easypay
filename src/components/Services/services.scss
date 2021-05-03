@@ -4,62 +4,59 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
 	width: 100%;
-	padding: 1rem 0;
-	padding-bottom: 3rem;
-	.services-blob {
-		position: absolute;
-		top: 0;
-		z-index: 10;
-	}
-	.services-title {
-		text-align: center;
-		font-family: $poppins;
-		font-size: 3rem;
-		font-weight: 600;
-		margin: 1rem 0;
-	}
-	.services-container {
-		width: 90%;
-		padding: 20px 0;
-		max-width: 1380px;
-		.service-img {
-			width: 70px;
-			margin: 1rem;
-		}
-		.services-list-container {
-			.service-row-1 {
-				display: grid;
-				grid-template-columns: repeat(3, 1fr);
-				grid-gap: 2.5rem;
-			}
+	padding: 4rem 0;
+	padding-bottom: 5rem;
 
-			.single-service {
-				cursor: pointer;
-				display: flex;
-				align-items: center;
-				flex-direction: column;
-				justify-content: space-evenly;
-				font-family: $poppins;
-				font-size: 1rem;
-				line-height: 1.4rem;
-				text-align: center;
-				margin-bottom: 10px;
-				color: grey;
-				padding: 1.7rem;
-				border: 1px solid rgba($color: #000000, $alpha: 0.1);
-				border-radius: 15px;
-				.single-service-title {
-					font-size: 1.5rem;
-					line-height: 1.7rem;
-					font-weight: 500;
-					color: $purple;
-					margin-bottom: 0.5rem;
+	.services-parent-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 90%;
+		max-width: 1380px;
+		.services-title {
+			color: $primary-font-color;
+			font-family: $poppins;
+			font-size: 3rem;
+			font-weight: 600;
+			margin-bottom: 2rem;
+		}
+		.services-container {
+			padding: 20px 0;
+			.service-img {
+				width: 70px;
+				margin: 1rem;
+			}
+			.services-list-container {
+				.service-row-1 {
+					display: grid;
+					grid-template-columns: repeat(3, 1fr);
+					grid-gap: 5rem;
 				}
-				.service-des {
-					text-align: center;
+
+				.single-service {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					cursor: pointer;
+					font-family: $poppins;
+					font-size: 1rem;
+					line-height: 1.4rem;
+					margin-bottom: 10px;
+
+					.single-service-title {
+						font-size: 1.5rem;
+						line-height: 1.7rem;
+						font-weight: 600;
+						color: $primary-font-color;
+						margin: 15px 0;
+						text-align: center;
+					}
+					.service-des {
+						color: rgb(160, 160, 160);
+						text-align: center;
+					}
 				}
 			}
 		}
@@ -68,21 +65,23 @@
 
 @media screen and (max-width: 970px) {
 	.services-section {
-		padding-bottom: 40px;
-		.services-title {
-			font-size: 2.2rem;
-			font-weight: 600;
-			margin: 0.2rem 0;
-		}
-		.services-container {
-			.services-list-container {
-				margin-top: 10px;
-				.service-row-1 {
-					grid-template-columns: repeat(2, 1fr);
-					grid-gap: 2.3rem;
-				}
-				.single-service {
-					margin-bottom: 5px;
+		padding: 3rem 0;
+		.services-parent-container {
+			.services-title {
+				font-size: 2.2rem;
+				font-weight: 600;
+				margin: 0.2rem 0;
+			}
+			.services-container {
+				.services-list-container {
+					margin-top: 10px;
+					.service-row-1 {
+						grid-template-columns: repeat(2, 1fr);
+						grid-gap: 2.3rem;
+					}
+					.single-service {
+						margin-bottom: 5px;
+					}
 				}
 			}
 		}
@@ -92,22 +91,24 @@
 @media screen and (max-width: 650px) {
 	.services-section {
 		padding-bottom: 30px;
-		.services-title {
-			font-size: 1.8rem;
-			font-weight: 600;
-			margin: 0rem 0;
-		}
-		.services-container {
-			padding: 10px 10px 0 10px;
-			.services-list-container {
-				.service-row-1 {
-					grid-template-columns: repeat(1, 1fr);
-					grid-gap: 1rem;
-				}
-				.single-service {
-					margin-bottom: 15px;
-					&:hover {
-						transform: none;
+		.services-parent-container {
+			.services-title {
+				font-size: 1.8rem;
+				font-weight: 600;
+				margin: 0rem 0;
+			}
+			.services-container {
+				padding: 10px 10px 0 10px;
+				.services-list-container {
+					.service-row-1 {
+						grid-template-columns: repeat(1, 1fr);
+						grid-gap: 1rem;
+					}
+					.single-service {
+						margin-bottom: 15px;
+						&:hover {
+							transform: none;
+						}
 					}
 				}
 			}

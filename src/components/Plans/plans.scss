@@ -6,23 +6,23 @@
 	font-family: $poppins;
 	display: flex;
 	flex-direction: column;
-	padding: 2rem 0;
-	padding-bottom: 2.5rem;
+	padding: 4rem 0;
 	align-items: center;
 	width: 100%;
-	background: url('./bg.png') no-repeat center;
-	background-color: #6b35b8;
-	background-size: cover;
+	background-color: #ffeef9;
 	.plans-section-title {
-		color: white;
+		color: $primary-font-color;
 		font-size: 3rem;
 		margin-bottom: 1rem;
 		font-weight: 600;
+		.unlock-title {
+			color: #df2b66;
+		}
 	}
 	.plans-section-des {
-		color: white;
+		color: $primary-font-color;
 		text-align: center;
-		margin-bottom: 2rem;
+		margin-bottom: 3rem;
 	}
 	.plans-container {
 		display: flex;
@@ -31,7 +31,7 @@
 		max-width: 1380px;
 		width: 90%;
 		.plan-card-container {
-			margin: 0.2rem 1rem;
+			margin: 0.2rem 1.4rem;
 			margin-bottom: 30px;
 			padding: 3rem;
 			min-width: 300px;
@@ -41,6 +41,7 @@
 			background-color: white;
 			border-radius: 10px;
 			transition: 0.3s all ease;
+			border: 1px solid rgba($color: #a9a9a9, $alpha: 0.6);
 			.plan-type {
 				font-size: 1.5rem;
 			}
@@ -77,16 +78,16 @@
 			margin-top: 1rem;
 			padding: 0.7rem 0;
 			width: 100%;
-			color: white;
+			color: #fff;
 			font-weight: 600;
 			outline: none;
 			border-radius: 2px;
 			border: none;
 			transition: 0.2s all ease;
-			background-color: #fa6251;
-			border: 1px solid #fa6251;
+			background-color: #df2b66;
+			border: 1px solid #df2b66;
 			&:hover {
-				color: #fa6251;
+				color: #df2b66;
 				background: none;
 			}
 		}

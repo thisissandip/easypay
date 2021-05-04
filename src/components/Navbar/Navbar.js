@@ -20,7 +20,6 @@ function Navbar() {
 	const hidemenu = () => {
 		const sidebar = document.querySelector('.nav-links');
 		sidebar.style.right = '-100%';
-		/* sidebar.style.display = "none"; */
 	};
 
 	window.onscroll = () => {
@@ -30,13 +29,12 @@ function Navbar() {
 	};
 
 	return (
-		<nav className={navbarbg && `nav-bg`}>
+		<nav className={navbarbg ? `nav-bg` : ''}>
 			<div className={navbarbg ? `nav-cont scrolled` : `nav-cont`}>
 				<div className='logo'>
 					<a
-						href='#header'
+						href='#'
 						onClick={() => {
-							scrollToDiv('header');
 							hidemenu();
 						}}>
 						EasyPay
@@ -49,7 +47,7 @@ function Navbar() {
 					<li className='nav-item'>
 						<a
 							onClick={() => {
-								scrollToDiv('services');
+								scrollToDiv('services-section'); // id of the section to scroll to (The id of this section in website-data.js)
 								hidemenu();
 							}}>
 							Services
@@ -58,7 +56,7 @@ function Navbar() {
 					<li className='nav-item'>
 						<a
 							onClick={() => {
-								scrollToDiv('plans');
+								scrollToDiv('plans-section'); // id of the section to scroll to (The id of this section in website-data.js)
 								hidemenu();
 							}}>
 							Pricing
@@ -67,7 +65,7 @@ function Navbar() {
 					<li className='nav-item'>
 						<a
 							onClick={() => {
-								scrollToDiv('team');
+								scrollToDiv('team-section'); // id of the section to scroll to (The id of this section in website-data.js)
 								hidemenu();
 							}}>
 							Team
@@ -76,26 +74,16 @@ function Navbar() {
 					<li className='nav-item'>
 						<a
 							onClick={() => {
-								scrollToDiv('reviews');
+								scrollToDiv('reviews-section'); // id of the section to scroll to (The id of this section in website-data.js)
 								hidemenu();
 							}}>
 							Reviews
 						</a>
 					</li>
 					<li className='nav-item'>
-						<a
-							onClick={() => {
-								scrollToDiv('contact');
-								hidemenu();
-							}}>
-							Contact
-						</a>
+						<a className='nav-btn'>Try For Free</a>
 					</li>
 				</ul>
-				{/* 	<div className='btns-container'>
-					<button>Login</button>
-					<button>Sign Up</button>
-				</div> */}
 			</div>
 		</nav>
 	);

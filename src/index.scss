@@ -12,15 +12,8 @@ body {
 }
 
 $poppins: 'Poppins', sans-serif;
-$blue: #fa6251; // #5714ff;
-$purple: #6b35b8;
 
 $primary-font-color: #2e2b2c;
-$orange: #fa7e75;
-$my-purple: rgb(225, 234, 251);
-
-$primary-color: #f9dfc8;
-$secondary-color: #77acf1;
 
 .back-to-top-btn {
 	cursor: pointer;
@@ -32,7 +25,7 @@ $secondary-color: #77acf1;
 	position: fixed;
 	z-index: 10000;
 	font-size: 2.2rem;
-	background-color: $blue;
+	background-color: #df2b66;
 	border-radius: 100%;
 	display: none;
 	box-shadow: 0 3px 10px rgba($color: #000000, $alpha: 0.3);

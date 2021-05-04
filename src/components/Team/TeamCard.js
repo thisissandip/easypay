@@ -1,6 +1,6 @@
-import React from "react";
-import "./themes.scss";
-import { FaFacebookF, FaTwitter, FaInstagram, FaGithub } from "react-icons/fa";
+import React from 'react';
+import './team.scss';
+import { FaFacebookF, FaTwitter, FaInstagram, FaGithub } from 'react-icons/fa';
 
 function TeamCard({ name, pos, pic }) {
 	return (
@@ -17,7 +17,7 @@ function TeamCard({ name, pos, pic }) {
 			</div>
 			<img
 				className='member-pic'
-				src={`../../imgs/${pic}`}
+				src={process.env.PUBLIC_URL + `/imgs/${pic}`}
 				alt='Name of the Member'
 			/>
 		</div>

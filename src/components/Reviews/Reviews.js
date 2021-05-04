@@ -1,19 +1,16 @@
-import React from "react";
-import { FaStar } from "react-icons/fa";
-import "./reviews.scss";
+import React from 'react';
+import { FaStar } from 'react-icons/fa';
+import './reviews.scss';
 
 function Reviews({ name, pos, review, highlight, stars, picture }) {
 	return (
 		<div className='reviews-card'>
 			<div className='review-details'>
-				{" "}
+				{' '}
 				<div className='stars'>
-					{
-						// Or something else
-						[...Array(stars)].map((e, i) => (
-							<FaStar key={i} />
-						))
-					}{" "}
+					{[...Array(stars)].map((e, i) => (
+						<FaStar key={i} />
+					))}{' '}
 				</div>
 				<div className='review-highlight'>{highlight}</div>
 				<div className='review-des'>{review}</div>
@@ -21,7 +18,7 @@ function Reviews({ name, pos, review, highlight, stars, picture }) {
 
 			<div className='review-person-cont'>
 				<img
-					src={`../../imgs/${picture}`}
+					src={process.env.PUBLIC_URL + `/imgs/${picture}`}
 					alt='profile picture'
 					className='profile-pic'
 				/>

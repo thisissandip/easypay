@@ -1,5 +1,5 @@
 import React from 'react';
-import './Layout.scss';
+import './infosection.scss';
 
 function HeaderLayout({
 	layoutname,
@@ -11,9 +11,11 @@ function HeaderLayout({
 	imgname,
 	imgclassname,
 	features,
+	id,
 }) {
 	return (
 		<section
+			id={id}
 			style={{
 				background: bg,
 				color: mycolor,
@@ -47,7 +49,7 @@ function HeaderLayout({
 				<div className='layout-right-container'>
 					<img
 						alt='phone + cashback'
-						src={`/imgs/${imgname}`}
+						src={process.env.PUBLIC_URL + `/imgs/${imgname}`}
 						className={`header-phone ${imgclassname}`}
 					/>
 				</div>

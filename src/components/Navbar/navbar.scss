@@ -2,7 +2,7 @@
 
 .nav-bg {
 	background-color: #fff;
-	border-bottom: 1px solid rgba($color: #bfbfbf, $alpha: 0.3);
+	border-bottom: 1px solid rgba($color: #bfbfbf, $alpha: 0.5);
 }
 
 nav {
@@ -15,6 +15,7 @@ nav {
 	width: 100%;
 	padding: 1rem 0;
 	transition: 0.3s all ease;
+	border-bottom: 1px solid rgba($color: #bfbfbf, $alpha: 0);
 	.nav-cont {
 		display: flex;
 		justify-content: space-between;
@@ -43,9 +44,21 @@ nav {
 				margin-right: 40px;
 				a {
 					cursor: pointer;
-					font-size: 1.1rem;
+					font-size: 1rem;
 					color: #4f453f;
 					text-decoration: none;
+				}
+				a.nav-btn {
+					border-radius: 2px;
+					background-color: transparent;
+					border: 1px solid #2f43c5;
+					padding: 5px 15px;
+					color: #2f43c5;
+					transition: 0.2s all ease;
+					&:hover {
+						background-color: #2f43c5;
+						color: #fff;
+					}
 				}
 
 				&:last-child {

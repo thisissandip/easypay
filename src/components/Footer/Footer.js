@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 import {
 	FaFacebookSquare,
 	FaTwitterSquare,
 	FaInstagramSquare,
 	FaSnapchatSquare,
-} from "react-icons/fa";
-import "./footer.scss";
+} from 'react-icons/fa';
+import './footer.scss';
 
 function Footer() {
 	return (
@@ -13,7 +13,7 @@ function Footer() {
 			<footer>
 				<div className='footer-cont'>
 					<div className='foot-col-1'>
-						<div className='company-logo'>Payments</div>
+						<div className='company-logo'>EasyPay</div>
 						<div className='company-des'>
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem
 							suscipit accusamus libero! Nemo, aliquam eligendi.

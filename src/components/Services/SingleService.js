@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
 function SingleService({ name, img }) {
 	return (
 		<div className='single-service'>
 			<img
 				alt='services'
-				src={`../../imgs/serviceimgs/${img}`}
+				src={process.env.PUBLIC_URL + `/imgs/serviceimgs/${img}`}
 				className='service-img'></img>
 			<div className='single-service-title'>{name}</div>
 			<div className='service-des'>

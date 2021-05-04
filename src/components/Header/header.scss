@@ -4,23 +4,12 @@ header {
 	position: relative;
 	width: 100%;
 	height: 750px;
-	/* 	background: url('./headerbg3.jpg') center center;
-	background-size: cover; */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background-color: #f9dfc8;
 	transition: 0.2s all ease;
 	overflow: hidden;
-
-	/* 	.slash {
-		position: absolute;
-		top: 750px;
-		width: 200%;
-		height: 100%;
-		background-color: #fff;
-		//border-top: 10px solid goldenrod;
-		border-radius: 50%;
-	} */
 
 	.header-container {
 		display: flex;
@@ -28,6 +17,7 @@ header {
 		height: 100%;
 		width: 90%;
 		max-width: 1380px;
+
 		position: relative;
 		z-index: 5;
 		font-family: $poppins;
@@ -40,9 +30,9 @@ header {
 			margin-right: 10px;
 			width: 50%;
 			.left-title {
-				font-size: 3rem;
+				font-size: 3.5rem;
 				font-weight: 700;
-				line-height: 4rem;
+				line-height: 4.2rem;
 				color: $primary-font-color;
 				transition: 0.1s all ease;
 			}
@@ -59,7 +49,6 @@ header {
 				.learnmore-btn {
 					cursor: pointer;
 					font-size: 1rem;
-					color: $blue;
 					border: 1px solid #2f43c5;
 					outline: none;
 					background-color: #2f43c5;
@@ -68,7 +57,7 @@ header {
 					padding: 0.7rem 1.5rem;
 					margin-right: 1rem;
 					transition: all 0.2s ease;
-					box-shadow: 5px 5px 0px #fe8657;
+					box-shadow: 5px 5px 0px #fd8e63;
 					&:hover {
 						box-shadow: 5px 5px 0px #fa5b90;
 					}
@@ -87,18 +76,8 @@ header {
 	}
 }
 
-header::before {
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-color: #f9dfc8;
-	opacity: 0.85;
-	z-index: 0;
-}
-
 // left content size screen
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1150px) {
 	header {
 		.header-container {
 			.header-left-container {

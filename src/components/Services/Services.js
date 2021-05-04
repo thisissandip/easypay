@@ -1,17 +1,17 @@
 import React from 'react';
 import SingleService from './SingleService';
-import { servicesdata1, servicesdata2 } from '../../layoutdata';
+import { servicesdata } from '../../websitedata';
 import './services.scss';
 
 function Services() {
-	const services1 = servicesdata1.map((item) => (
+	const services1 = servicesdata.allservices.map((item) => (
 		<SingleService key={item.name} name={item.name} img={item.img} />
 	));
 
 	return (
-		<section id='services' className='services-section'>
+		<section id={`${servicesdata.id}`} className='services-section'>
 			<div className='services-parent-container'>
-				<div className='services-title'>What We Offer</div>
+				<div className='services-title'>{servicesdata.servicestitle}</div>
 				<div className='services-container'>
 					<div className='services-list-container'>
 						<div className='service-row-1'>{services1}</div>

@@ -1,16 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FiMenu } from 'react-icons/fi';
 import { GrClose } from 'react-icons/gr';
 import './navbar.scss';
 
 function Navbar() {
 	const [navbarbg, setnavbarbg] = useState(null);
-
-	const scrollToDiv = (id) => {
-		let top = document.querySelector(`#${id}`).offsetTop;
-		let mytop = top - 50;
-		window.scrollTo(0, mytop);
-	};
 
 	const showmenu = () => {
 		const sidebar = document.querySelector('.nav-links');
@@ -27,6 +21,22 @@ function Navbar() {
 			? setnavbarbg(true)
 			: setnavbarbg(false);
 	};
+
+	useEffect(() => {
+		// Scroll to the div with navbar height
+		let allnavItems = document.querySelectorAll('.nav-link');
+		allnavItems.forEach((item) => {
+			item.addEventListener('click', (e) => {
+				e.preventDefault();
+				const aTag = item.getAttribute('href');
+				const id = aTag.slice(1);
+
+				let top = document.querySelector(`#${id}`).offsetTop;
+				let mytop = top - 70;
+				window.scrollTo(0, mytop);
+			});
+		});
+	}, []);
 
 	return (
 		<nav className={navbarbg ? `nav-bg` : ''}>
@@ -46,8 +56,9 @@ function Navbar() {
 
 					<li className='nav-item'>
 						<a
+							className='nav-link'
+							href='#services-section' // id of the section to scroll to (The id of this section in website-data.js)
 							onClick={() => {
-								scrollToDiv('services-section'); // id of the section to scroll to (The id of this section in website-data.js)
 								hidemenu();
 							}}>
 							Services
@@ -55,8 +66,9 @@ function Navbar() {
 					</li>
 					<li className='nav-item'>
 						<a
+							className='nav-link'
+							href='#plans-section' // id of the section to scroll to (The id of this section in website-data.js)
 							onClick={() => {
-								scrollToDiv('plans-section'); // id of the section to scroll to (The id of this section in website-data.js)
 								hidemenu();
 							}}>
 							Pricing
@@ -64,8 +76,9 @@ function Navbar() {
 					</li>
 					<li className='nav-item'>
 						<a
+							className='nav-link'
+							href='#team-section' // id of the section to scroll to (The id of this section in website-data.js)
 							onClick={() => {
-								scrollToDiv('team-section'); // id of the section to scroll to (The id of this section in website-data.js)
 								hidemenu();
 							}}>
 							Team
@@ -73,8 +86,9 @@ function Navbar() {
 					</li>
 					<li className='nav-item'>
 						<a
+							href='#reviews-section' // id of the section to scroll to (The id of this section in website-data.js)
+							className='nav-link'
 							onClick={() => {
-								scrollToDiv('reviews-section'); // id of the section to scroll to (The id of this section in website-data.js)
 								hidemenu();
 							}}>
 							Reviews

@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Easypay
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Easypay is React-based single page website template. Create your React website in just 2 minutes!\
+No need to code anything!
+Just add your custom website content to [websitedata.js](https://github.com/thisissandip/easypay/blob/main/src/websitedata.js) file and build.\
+Congratulations you have created your website in React in just 2 mintues!
 
-## Available Scripts
+### [Live Demo](https://thisissandip.github.io/easypay/#)
 
-In the project directory, you can run:
+### 🧰 &nbsp;Built with
 
-### `npm start`
+  - <a target="_blank" href="https://reactjs.org/" >React</a>
+  - <a target="_blank" href="https://sass-lang.com/" >SCSS</a>
+  - <a target="_blank" href="https://pages.github.com/" >Github Pages</a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 🚀 &nbsp;Development setup
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Prerequisites
 
-### `npm test`
+The following software is required to be installed on your system:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node 8.x
+- Npm 3.x
 
-### `npm run build`
+Type the following commands in the terminal to verify your node and npm versions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+node -v
+npm -v
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository
 
-### `npm run eject`
+```
+git clone https://github.com/thisissandip/what-should-i-watch-next.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Install dependencies
+```
+npm install
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Start local development server
+```
+npm start
+```
+4. Edit [websitedata.js](https://github.com/thisissandip/easypay/blob/main/src/websitedata.js) file. ( Note: Don't edit the `id` property in websitedata.js )
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+5. Build your website 
+```
+npm run build
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Congratulations you have created your website in React without coding!
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 🤝 &nbsp;Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Fork it
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request
